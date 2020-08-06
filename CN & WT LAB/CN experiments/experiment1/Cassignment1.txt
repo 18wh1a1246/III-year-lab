@@ -1,0 +1,155 @@
+2.sum is multiples of 7 in a number
+
+code:
+
+#include<stdio.h>
+int main(){
+    int rem,sum = 0;
+    for( int i=10;i<=99;i++){
+        rem = i%10;
+        sum = rem + i/10;
+     if(sum%7==0){
+        printf("%d\t",i);
+    }
+    }
+    return 0;
+}
+    
+
+3.sum of products of conscutive numbers
+
+code:
+
+#include<stdio.h>
+int main(){
+    int n[100],sum =0,l;
+    scanf("%d",&l);
+    for(int i=0;i<=l;i++){
+        scanf("%d",&n[i]);
+    }
+    for( int i =0;i<=l;i++){
+        i *= (i+1);
+        sum = sum+i;
+       printf("%d",sum);
+    }
+     
+    return 0;
+}
+
+
+4. date using switchcase
+
+code:
+
+#include<stdio.h>
+int main(){
+    int d,y;
+    scanf("%d%d",&d,&y);
+    char mo[12]={"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    for(i=1;i<=12;i++){
+    scanf("%c",&mo[i]);
+    }
+    switch(mo){
+    case 1:
+	       printf("%dth%c,%d",d,January,y);
+	       break;
+	case 2:
+	       printf("February\n");
+	       break;
+	case 3:
+	       printf("March\n");
+	       break;
+	case 4:
+	       printf("April\n");
+	       break;
+	case 5:
+	       printf("May\n");
+	       break;
+	case 6:
+	       printf("June\n");
+	       break;
+	case 7:
+	       printf("July\n");
+	       break;
+	case 8:
+	       printf("August\n");
+	       break;
+	case 9:
+	       printf("September\n");
+	       break;
+	case 10:
+	       printf("October\n");
+	       break;
+	case 11:
+	       printf("November\n");
+	       break;
+	case 12:
+	       printf("December\n");
+	       break;
+	default:
+	       printf("invalid Month number. \nPlease try again ....\n");
+	       break;
+      } 
+}
+
+
+5. ugly prime
+
+code:
+
+# include <stdio.h>
+int main()
+{
+int n,x =0;
+  scanf("%d",&n);
+       while (n != 1) 
+       {  
+            if (n % 5 == 0) 
+            {  
+                n /= 5;  
+            } 
+            else if (n % 3 == 0) 
+            {  
+                n /= 3;  
+            } 
+            else if (n % 2 == 0) 
+            {  
+                n /= 2;  
+            } 
+            else 
+            {  
+                printf("It is not an ugly number.\n"); 
+                break;  
+            }  
+        } 
+		        if (x == 0)
+		        { 
+                printf("It is an ugly number.\n");
+                }
+
+return 0;
+}
+
+
+6.printing pyramid
+
+code:
+
+#include<stdio.h>
+int main(){
+    int i,j,n;
+    scanf("%d",&n);
+    for(i=n;i>=1;i--){
+        for(j=n;j>=1;j--){
+            if(i>= j){
+                printf("*");
+            }
+            else{
+                printf("-");
+            }
+        }
+    
+        printf("\n");
+    }
+    
+}
